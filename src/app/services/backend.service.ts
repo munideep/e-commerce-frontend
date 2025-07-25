@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject,switchMap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -21,14 +22,14 @@ userInput$= new Subject<any>();
         .set('password', data.password)
         .set('email', data.email);
 
-      return this.http.get('http://localhost:3000/users', { params });
+      return this.http.get(`${environment.apiBaseUrl}/users`, { params });
     })
   );
   }
 
 
   updateUserData(data: object): Observable<any>{
-    return this.http.post('http://localhost:3000/updateusers',data);
+    return this.http.post(`${environment.apiBaseUrl}/updateusers`,data);
   }
 
 
