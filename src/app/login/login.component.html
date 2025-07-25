@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  class="form-container">
+    <div style="border-width: 1px;border-style: solid;padding:15px;border-radius: 10px;border-color:white;background-color: transparent; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+<form [formGroup]="logIn" (ngSubmit)="onSubmit(logIn)">
+    <span>Username</span>
+    <br>
+    <input type="text" formControlName="username" [placeholder]="username"/>
+    <br>
+    <span>Password</span>
+    <br>
+    <input type="password" formControlName="password" [placeholder]="password">
+    <br>
+    <div style="display: flex;justify-content: center;align-items: center;height: fit-content;">
+        <button type="submit" >Sign In</button>
+    </div>
+    <br>
+    <hr>
+    <div style="display: flex;align-items: center;height: fit-content;justify-content: space-between;">
+    <button type="button">Forgot Password</button>
+    <button type="button" (click)="onSignUp()">Sign Up</button>
+    </div>
+    
+    
+</form>
+</div>
+</body>
+</html>
