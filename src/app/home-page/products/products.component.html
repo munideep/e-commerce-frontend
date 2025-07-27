@@ -1,0 +1,12 @@
+<body style="padding-top: 1px;display: flex;justify-content: center;align-items: start;">
+    <div class="centering">
+        <div class="img-container"  *ngFor="let image of imageArr;let i= index;">
+            <img [src]="imagespath+image"/>
+            <p> {{ image }}</p>
+            <p>   {{ i+i+1 | currency : '$' }}</p>
+            <button (click)="AddtoCart(i,image)">Add to Cart</button>
+        </div>
+</div>
+</body>
+
+

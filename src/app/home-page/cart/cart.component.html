@@ -1,0 +1,23 @@
+ <div class="main-container">
+  <div class="items-container">
+    <div class="img-container" *ngFor="let image of imgArr;let i= index">
+      <img [src]="image" alt="">
+      <p>  {{ image.split('/')[2] }}</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quam sequi obcaecati ut consequatur. Labore repellendus consectetur quasi numquam hic error tempore recusandae. Non inventore laboriosam mollitia officiis aliquid nisi?</p>
+     <div style="display: flex;">
+        <button (click)="RemoveQuantity(i)">-</button>
+     <span>{{ updatedQty[i].ItemQuantity }}</span>
+      <button (click)="UpdateQuantity(i)">+</button>
+     </div>
+      <span style="display: grid;">Price {{ updatedQty[i].TotalPrice}}</span>
+    </div>
+  </div> 
+
+  <div class="cart-value-container" *ngIf="val">
+    <h1>Total Cart Value</h1>
+    <p>Total Quantity {{ count }}</p>
+    <p>Price {{ price | currency : '$' }}</p>
+  </div>
+</div>
+
+

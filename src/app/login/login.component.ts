@@ -58,6 +58,7 @@ ngOnInit(): void {
               console.log("this is the flag value",response.flag);
               if(response.flag){
                 alert('logged in successfully');
+                this.backendService.authcheck(true);
                 this.route.navigate(['/home'])
               }
               else{

@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('/assets/images/packages_800x600.jpg');
+    background-image: url('/assets/images/shoe-footwear-product-photography-london-adidas-ultra-boost-14.jpg');
     background-size: cover;
 }
 
@@ -23,7 +23,7 @@ button:hover{
 }
 
 span{
-    color:black;
+    color:gold;
     font-style: italic;
     font-weight: bold;
     font-size: 20px;
@@ -33,7 +33,7 @@ input{
     color: black;;
     margin-bottom: 5px;
     border-width: 0px;
-    background-color:white;
+    background-color:#FAEBD7;
     height:50px;
     width:400px;
     font-size: 14px;
@@ -51,7 +51,7 @@ input:focus {
 
 }
 input::placeholder {
-  color: black;;
+  color:rgb(210, 205, 177);
   font-size: 14px;
    font-style: italic;
 }

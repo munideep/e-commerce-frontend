@@ -1,2 +1,20 @@
-<p>home-page works!</p>
-<button (click)="loginpage()">Login</button>
+<mat-toolbar style="display: flex;justify-content: space-evenly;">
+  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon"  [matMenuTriggerFor]="menu1">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Commerce Platform</span>
+  <span class="example-spacer"></span>
+  <button matIconButton class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu #menu1="matMenu">
+    <button mat-menu-item [routerLink]="['/home/products']">Products</button>
+    <button mat-menu-item [routerLink]="['/home/cart']">Cart</button>
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item (click)="loginpage()">Log Out</button>
+</mat-menu>
+<router-outlet></router-outlet>

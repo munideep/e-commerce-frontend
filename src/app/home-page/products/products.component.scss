@@ -1,0 +1,22 @@
+.img-container{
+margin-left: 15px;
+ //   margin: 10px 10px;
+    height:400px;
+   // width:400px;
+}
+.img-container img{
+    height: 250px;
+   width: 300px;
+   background-color: white;
+}
+.centering {
+    display: flex;
+    flex-wrap: wrap;        /* allows items to move to the next row */
+    align-items: flex-start;
+    justify-content: stretch;
+    max-width: 1280px;      /* optional: fix container width */
+    margin: 0 auto;
+    max-height: fit-content;       /* or a fixed px */
+   // overflow-y: auto;       /* vertical scrolling */
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
